@@ -42,7 +42,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User update(User user) {
 		if(userDao.findOne(user.getId())==null){
-			//Cannot update the entity which hasn't exist 
 			return null;
 		}
 		return userDao.save(user);
